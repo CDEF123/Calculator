@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div id="history"></div>
+      <div id="output">0</div>
+    </div>
+    <div class="buttons">
+      <!-- Row 1: Memory and Clear Functions -->
+      <button class="btn function" onclick="clearAll()">AC</button>
+      <button class="btn function" onclick="clearEntry()">CE</button>
+      <button class="btn function" onclick="memoryRecall()">MR</button>
+      <button class="btn operator" onclick="setOperator('%')">%</button>
+
+      <!-- Row 2: Trigonometric Functions -->
+      <button class="btn function" onclick="calculateAdvanced('sin')">sin</button>
+      <button class="btn function" onclick="calculateAdvanced('cos')">cos</button>
+      <button class="btn function" onclick="calculateAdvanced('tan')">tan</button>
+      <button class="btn function" onclick="calculateAdvanced('log')">log</button>
+
+      <!-- Row 3: Advanced Functions -->
+      <button class="btn function" onclick="calculateAdvanced('pi')">p</button>
+      <button class="btn function" onclick="calculateAdvanced('e')">e</button>
+      <button class="btn function" onclick="calculateAdvanced('sqrt')">v</button>
+      <button class="btn operator" onclick="setOperator('/')">÷</button>
+
+      <!-- Row 4: Numbers and Multiplication -->
+      <button class="btn number" onclick="appendNumber(7)">7</button>
+      <button class="btn number" onclick="appendNumber(8)">8</button>
+      <button class="btn number" onclick="appendNumber(9)">9</button>
+      <button class="btn operator" onclick="setOperator('*')">×</button>
+
+      <!-- Row 5: Numbers and Subtraction -->
+      <button class="btn number" onclick="appendNumber(4)">4</button>
+      <button class="btn number" onclick="appendNumber(5)">5</button>
+      <button class="btn number" onclick="appendNumber(6)">6</button>
+      <button class="btn operator" onclick="setOperator('-')">-</button>
+
+      <!-- Row 6: Numbers and Addition -->
+      <button class="btn number" onclick="appendNumber(1)">1</button>
+      <button class="btn number" onclick="appendNumber(2)">2</button>
+      <button class="btn number" onclick="appendNumber(3)">3</button>
+      <button class="btn operator" onclick="setOperator('+')">+</button>
+
+      <!-- Row 7: Zero, Decimal, Equals -->
+      <button class="btn number" onclick="appendNumber(0)">0</button>
+      <button class="btn function" onclick="appendDecimal()">.</button>
+      <button class="btn function" onclick="toggleSign()">±</button>
+      <button class="btn function" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
